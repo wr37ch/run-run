@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: test
     strategy:
-      max-parallel: 5
+      max-parallel: 2
       matrix:
         value: [one, two, three, four, five]
     steps:
