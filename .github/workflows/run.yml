@@ -1,0 +1,15 @@
+name: Max Parallel
+on:
+  workflow_dispatch:
+
+jobs:
+  example_matrix:
+    runs-on: ubuntu-latest
+    environment: test
+    strategy:
+      max-parallel: 5
+      matrix:
+        value: [one, two, three, four, five]
+    steps:
+      - name: echo
+        run: echo ${{ matrix.value }}
