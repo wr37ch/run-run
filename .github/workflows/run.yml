@@ -10,6 +10,7 @@ jobs:
       - name: echo
         run: echo 'Approved!'
   deployment:
+    needs: approval
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 2
