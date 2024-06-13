@@ -3,7 +3,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  example_matrix:
+  approval:
+    runs-on: ubuntu-latest
+    environment: test
+    steps:
+      - name: echo
+        run: echo 'Approved!'
+  deployment:
     runs-on: ubuntu-latest
     environment: test
     strategy:
