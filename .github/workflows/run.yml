@@ -15,7 +15,7 @@ jobs:
     strategy:
       max-parallel: 2
       matrix:
-        value: [one, two, three, four, five]
+        value: [one, two, three, four, five, six, seven, eight, nine, ten]
     steps:
-      - name: echo
-        run: echo ${{ matrix.value }}
+      - name: sleep
+        run: sleep 60
